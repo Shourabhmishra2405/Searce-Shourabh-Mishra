@@ -25,7 +25,7 @@ class LinkedList:
 
         print(llstr)
 
-    def insert_at_end(self, data):
+    def append(self, data):
         if self.head is None:
             self.head = Node(data, None)
             return
@@ -37,7 +37,7 @@ class LinkedList:
     def insert_values(self, data_list):
         self.head = None
         for data in data_list:
-            self.insert_at_end(data)
+            self.append(data)
 
     def get_length(self):
         count = 0
@@ -85,7 +85,7 @@ ll = LinkedList()
 ll.insert_values(['banana','mango','grapes','orange'])
 ll.insert_at_beginning(5)
 ll.insert_at_beginning(89)
-ll.insert_at_end(79)
+ll.append(79)
 ll.print()
 print('length',ll.get_length())
 ll.remove_at(2)
