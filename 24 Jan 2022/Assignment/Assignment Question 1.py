@@ -9,6 +9,6 @@ def reverseList(P, start, end):
 # Taking inputs from user
 # Input for number of integer to reverse.
 n = int(input('Enter Number of integers'))
-# Input for numbers to reverse
+# Input for numbers to reverse.
 arr = list(map(int, input().split()))
 reverseList(arr,0,n-1)
