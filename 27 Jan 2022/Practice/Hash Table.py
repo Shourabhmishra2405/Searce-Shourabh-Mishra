@@ -12,9 +12,23 @@ class HashTable:
             h += ord(char)
         return h % 100
 
-    def add(self,key,val):
+    def __setitem__(self,key,val):
         h = self.get_hash(key)
         self.arr[h] = val
 
+    def __getitem__(self,key):
+        h = self.get_hash(key)
+        print(self.arr[h])
+    
+    def __delitem__(self,key):
+        h = self.get_hash(key)
+        self.arr[h] = None
+
 t = HashTable()
-t.('march 6')
+print(t.get_hash('march 6'))
+t['march 6'] = 130
+t['march 1'] = 20
+t['dec 17'] = 27
+del t['march 6']
+print(t.arr)
+
